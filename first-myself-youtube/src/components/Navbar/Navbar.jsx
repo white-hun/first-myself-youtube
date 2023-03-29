@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styles from "./Root.module.css";
 
 export default function Navdar() {
   return (
-    <div>
+    <nav className={styles.navbar}>
       <Link to="/home">test home</Link>
-      {/* <Link to="">test </Link> */}
-    </div>
+      <Link to="/video">test page</Link>
+    </nav>
   );
 }
