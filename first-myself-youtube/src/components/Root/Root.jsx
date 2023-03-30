@@ -4,9 +4,9 @@ import Navdar from "../Navbar/Navbar";
 
 export default function Root() {
   return (
-    <div>
+    <>
       <Navdar />
       <Outlet />
-    </div>
+    </>
   );
 }

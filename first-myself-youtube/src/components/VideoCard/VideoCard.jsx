@@ -8,8 +8,12 @@ export default function Video({ id, thumbnails, title, channel, publish }) {
       <Link to={`/video/${id}`}>
         <img src={thumbnails.url} alt={title} className={styles.thumbnail} />
         <h2 className={styles.title}>{title}</h2>
-        <span className={styles.channel}>{channel}</span>
-        <span className={styles.publish}>{publish}</span>
+        <div>
+          <span className={styles.channel}>{channel}</span>
+        </div>
+        <div>
+          <span className={styles.publish}>{publish}</span>
+        </div>
       </Link>
     </div>
   );
