@@ -1,0 +1,19 @@
+.videocard a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+.videocard {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 1rem;
+  width: 320px;
+  height: 300px;
+}
+.title {
+  font-size: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
