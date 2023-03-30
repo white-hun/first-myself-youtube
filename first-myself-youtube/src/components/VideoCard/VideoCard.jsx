@@ -7,7 +7,9 @@ export default function Video({ id, thumbnails, title, channel, publish }) {
     <div className={styles.videocard}>
       <Link to={`/video/${id}`}>
         <img src={thumbnails.url} alt={title} className={styles.thumbnail} />
-        <h2 className={styles.title}>{title}</h2>
+        <div className={styles.titlebox}>
+          <h2 className={styles.title}>{title}</h2>
+        </div>
         <div>
           <span className={styles.channel}>{channel}</span>
         </div>

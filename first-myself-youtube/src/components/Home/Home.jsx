@@ -3,13 +3,13 @@ import { useQuery } from "@tanstack/react-query";
 import VideoCard from "../VideoCard/VideoCard";
 import styles from "./Home.module.css";
 
-export default function Home() {
+export default function Home({ value }) {
   const {
     isLoading,
     error,
-    data: bts,
-  } = useQuery(["bts"], async () => {
-    return fetch("data/bts.json").then((res) => res.json());
+    data: popular,
+  } = useQuery(["popular"], async () => {
+    return fetch("data/popular.json").then((res) => res.json());
   });
 
   if (isLoading) return <p>Loading...</p>;
@@ -17,14 +17,14 @@ export default function Home() {
 
   return (
     <div className={styles.video}>
-      {bts.items.map((video) => (
+      {popular.items.map((video) => (
         <VideoCard
           key={video.id.videoId}
           id={video.id.videoId}
           thumbnails={video.snippet.thumbnails.medium}
           title={video.snippet.title}
           channel={video.snippet.channelTitle}
-          publish={video.snippet.publishTime}
+          publish={video.snippet.publishedAt}
         />
       ))}
     </div>
