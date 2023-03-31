@@ -3,9 +3,9 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 
-import Root from "./components/Root/Root";
-import Home from "./components/Home/Home";
-import NotFound from "./components/NotFound/NotFound";
+import VideoHome from "./components/VideoHome/VideoHome";
+import NotFound from "./pages/NotFound/NotFound";
+import Root from "./pages/Root/Root";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     element: <Root />,
     errorElement: <NotFound />,
     children: [
-      { index: true, path: "/home", element: <Home /> },
+      { index: true, path: "/home", element: <VideoHome /> },
       // {path: "", element: }
       // {path: "", element: }
     ],

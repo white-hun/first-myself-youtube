@@ -1,9 +1,9 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import VideoCard from "../VideoCard/VideoCard";
-import styles from "./Home.module.css";
+import styles from "./VideoHome.module.css";
 
-export default function Home({ value }) {
+export default function VideoHome({ value }) {
   const {
     isLoading,
     error,
