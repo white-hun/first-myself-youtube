@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import VideoCard from "../VideoCard/VideoCard";
 import styles from "./VideoHome.module.css";
 
-export default function VideoHome({ value }) {
+export default function VideoHome() {
   const {
     isLoading,
     error,
@@ -19,8 +19,8 @@ export default function VideoHome({ value }) {
     <div className={styles.video}>
       {popular.items.map((video) => (
         <VideoCard
-          key={video.id.videoId}
-          id={video.id.videoId}
+          key={video.id}
+          id={video.id}
           thumbnails={video.snippet.thumbnails.medium}
           title={video.snippet.title}
           channel={video.snippet.channelTitle}

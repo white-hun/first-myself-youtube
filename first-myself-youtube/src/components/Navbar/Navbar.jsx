@@ -13,7 +13,7 @@ export default function Navdar() {
   };
   return (
     <nav className={styles.navbar}>
-      <Link to="/home">
+      <Link to="/">
         <div className={styles.logolink}>
           <BsYoutube />
           <span className={styles.logoname}>Reactube</span>

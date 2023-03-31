@@ -1,11 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 
-import VideoHome from "./components/VideoHome/VideoHome";
 import NotFound from "./pages/NotFound/NotFound";
 import Root from "./pages/Root/Root";
+import VideoDetail from "./pages/VideoDetail/VideoDetail";
+import VideoHome from "./pages/VideoHome/VideoHome";
 
 const router = createBrowserRouter([
   {
@@ -13,8 +13,8 @@ const router = createBrowserRouter([
     element: <Root />,
     errorElement: <NotFound />,
     children: [
-      { index: true, path: "/home", element: <VideoHome /> },
-      // {path: "", element: }
+      { index: true, path: "/", element: <VideoHome /> },
+      { path: "/videos/:id", element: <VideoDetail /> }, // 동일화
       // {path: "", element: }
     ],
   },
