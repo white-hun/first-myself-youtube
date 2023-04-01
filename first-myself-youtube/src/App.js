@@ -6,6 +6,7 @@ import NotFound from "./pages/NotFound/NotFound";
 import Root from "./pages/Root/Root";
 import VideoDetail from "./pages/VideoDetail/VideoDetail";
 import VideoHome from "./pages/VideoHome/VideoHome";
+import VideoSearch from "./pages/VIdeoSearch/VideoSearch";
 
 const router = createBrowserRouter([
   {
@@ -14,8 +15,8 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
     children: [
       { index: true, path: "/", element: <VideoHome /> },
+      { path: "/videos/:search", element: <VideoSearch /> },
       { path: "/videos/:id", element: <VideoDetail /> }, // 동일화
-      // {path: "", element: }
     ],
   },
 ]);
