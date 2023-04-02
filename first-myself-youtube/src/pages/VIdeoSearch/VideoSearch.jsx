@@ -2,7 +2,6 @@ import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import { useParams } from "react-router-dom";
 import SearchVideoCard from "../SearchVideoCard/SearchVideoCard";
-import NotFound from "../NotFound/NotFound";
 import styles from "./VideoSearch.module.css";
 
 export default function VideoSearch() {
@@ -24,9 +23,9 @@ export default function VideoSearch() {
         <SearchVideoCard
           key={value.id.videoId}
           id={value.id.videoId}
-          thumbnails={value.snippet.thumbnails.medium}
+          thumbnails={value.snippet.thumbnails.medium.url}
           title={value.snippet.title}
-          pubilsh={value.snippet.pubilshedAt}
+          publish={value.snippet.publishedAt}
           channel={value.snippet.channelTitle}
           description={value.snippet.description}
         />
@@ -34,3 +33,5 @@ export default function VideoSearch() {
     </div>
   );
 }
+
+//console.log(bts.items.map((i) => i.id.videoId));
