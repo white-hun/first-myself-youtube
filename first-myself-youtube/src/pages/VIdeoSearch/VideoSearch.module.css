@@ -1,0 +1,9 @@
+.videosearch {
+  display: grid;
+  justify-content: flex-start;
+  grid-template-columns: repeat(1, minmax(320px, 320px));
+  grid-gap: 1rem;
+  padding: 10px;
+  padding-top: 50px;
+  width: 100%;
+}

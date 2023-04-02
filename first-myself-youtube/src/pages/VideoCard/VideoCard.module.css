@@ -20,3 +20,6 @@
 .titlebox {
   height: 68px;
 }
+.thumbnail {
+  border-radius: 0.8rem;
+}
