@@ -9,8 +9,8 @@ export default function VideoSearch() {
   const {
     isLoading,
     error,
-    data: bts,
-  } = useQuery(["bts"], async () => {
+    data: searchvideo,
+  } = useQuery(["searchvideo"], async () => {
     return fetch(`/../../data/${search}.json`).then((res) => res.json());
   });
 
@@ -19,15 +19,15 @@ export default function VideoSearch() {
 
   return (
     <div className={styles.videosearch}>
-      {bts.items.map((value) => (
+      {searchvideo.map((value) => (
         <SearchVideoCard
-          key={value.id.videoId}
-          id={value.id.videoId}
-          thumbnails={value.snippet.thumbnails.medium.url}
-          title={value.snippet.title}
-          publish={value.snippet.publishedAt}
-          channel={value.snippet.channelTitle}
-          description={value.snippet.description}
+          key={value.etag}
+          id={value.etag}
+          thumbnails={value.items.snippet.thumbnails.medium.url}
+          title={value.items.snippet.title}
+          publish={value.items.snippet.publishedAt}
+          channel={value.items.snippet.channelTitle}
+          description={value.items.snippet.description}
         />
       ))}
     </div>

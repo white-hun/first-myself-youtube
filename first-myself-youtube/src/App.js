@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, path: "/", element: <VideoHome /> },
       { path: "/videos/:search", element: <VideoSearch /> },
-      { path: "/watch/:id", element: <VideoDetail /> }, // 동일화
+      { path: "/watch/:etag", element: <VideoDetail /> }, // 동일화
     ],
   },
 ]);

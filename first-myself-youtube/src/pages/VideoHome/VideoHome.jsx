@@ -17,14 +17,14 @@ export default function VideoHome() {
 
   return (
     <div className={styles.video}>
-      {popular.items.map((video) => (
+      {popular.map((video) => (
         <VideoCard
-          key={video.id}
-          id={video.id}
-          thumbnails={video.snippet.thumbnails.medium.url}
-          title={video.snippet.title}
-          channel={video.snippet.channelTitle}
-          publish={video.snippet.publishedAt}
+          key={video.etag}
+          id={video.etag}
+          thumbnails={video.items.snippet.thumbnails.medium.url}
+          title={video.items.snippet.title}
+          channel={video.items.snippet.channelTitle}
+          publish={video.items.snippet.publishedAt}
         />
       ))}
     </div>
