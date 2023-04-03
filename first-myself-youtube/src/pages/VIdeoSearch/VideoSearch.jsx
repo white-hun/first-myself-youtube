@@ -19,15 +19,15 @@ export default function VideoSearch() {
 
   return (
     <div className={styles.videosearch}>
-      {searchvideo.map((value) => (
+      {searchvideo.items.map((value) => (
         <SearchVideoCard
-          key={value.etag}
-          id={value.etag}
-          thumbnails={value.items.snippet.thumbnails.medium.url}
-          title={value.items.snippet.title}
-          publish={value.items.snippet.publishedAt}
-          channel={value.items.snippet.channelTitle}
-          description={value.items.snippet.description}
+          key={value.id.videoId}
+          id={value.id.videoId}
+          thumbnails={value.snippet.thumbnails.medium.url}
+          title={value.snippet.title}
+          publish={value.snippet.publishedAt}
+          channel={value.snippet.channelTitle}
+          description={value.snippet.description}
         />
       ))}
     </div>
