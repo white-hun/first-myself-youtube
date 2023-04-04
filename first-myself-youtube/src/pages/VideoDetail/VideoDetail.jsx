@@ -19,10 +19,8 @@ export default function VideoDetail() {
 }
 
 //
-{
-  /* <img
-  className={styles.divbox}
-  src={prev.includes(etag).snippet.thumbnails.medium.url}
-  alt={prev.includes(etag).snippet.title}
-/> */
-}
+//  <img
+//   className={styles.divbox}
+//   src={prev.includes(etag).snippet.thumbnails.medium.url}
+//   alt={prev.includes(etag).snippet.title}
+// />
