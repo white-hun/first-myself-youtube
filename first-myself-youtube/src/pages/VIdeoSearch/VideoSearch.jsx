@@ -11,15 +11,17 @@ export default function VideoSearch() {
     error,
     data: searchvideo,
   } = useQuery(["searchvideo"], async () => {
-    return fetch(`/../../data/${search}.json`).then((res) => res.json());
+    return fetch(`../../data/${search}.json`).then((res) => res.json());
   });
 
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
-
+  if (!searchvideo.items?.length) {
+    return <div>No Data</div>;
+  }
   return (
     <div className={styles.videosearch}>
-      {searchvideo.items.map((value) => (
+      {searchvideo.items?.map((value) => (
         <SearchVideoCard
           key={value.etag}
           id={value.etag}

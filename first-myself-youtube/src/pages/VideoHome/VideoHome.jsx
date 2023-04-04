@@ -9,15 +9,15 @@ export default function VideoHome() {
     error,
     data: popular,
   } = useQuery(["popular"], async () => {
-    return fetch("/../../data/popular.json").then((res) => res.json());
+    return fetch("../../data/popular.json").then((res) => res.json());
   });
 
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>{error.message}</p>;
-
+  if (!popular.items?.length) return <div>No data</div>;
   return (
     <div className={styles.video}>
-      {popular.items.map((video) => (
+      {popular.items?.map((video) => (
         <VideoCard
           key={video.etag}
           id={video.etag}
@@ -27,16 +27,6 @@ export default function VideoHome() {
           publish={video.snippet.publishedAt}
         />
       ))}
-      {/* {popular.map((video) => (
-        <VideoCard
-          key={popular.etag}
-          id={popular.etag}
-          thumbnails={video.items.snippet.thumbnails.medium.url}
-          title={video.items.snippet.title}
-          channel={video.items.snippet.channelTitle}
-          publish={video.items.snippet.publishedAt}
-        />
-      ))} */}
     </div>
   );
 }
