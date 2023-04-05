@@ -14,10 +14,11 @@ export default function VideoHome() {
 
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>{error.message}</p>;
-  if (!popular.items?.length) return <div>No data</div>;
+  // if (!popular.items?.length) return <div>No data</div>;
+
   return (
     <div className={styles.video}>
-      {popular.items?.map((video) => (
+      {popular.items.map((video) => (
         <VideoCard
           key={video.etag}
           id={video.etag}
