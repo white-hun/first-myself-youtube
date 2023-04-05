@@ -12,15 +12,19 @@ export default function VideoDetail() {
   } = useQuery(["test"], async () => {
     return fetch("../../data/popular.json").then((res) => res.json());
   });
-  const clickedVideo = xxx.items.find((item) => item.etag === etag);
 
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>{error.message}</p>;
 
+  const clickedVideo = xxx?.items?.find((item) => item.etag === etag);
+
   return (
     <div>
-      <img src={clickedVideo.snippet.thumbnails.standard.url} alt={clickedVideo.snippet.title} />
-      <h2 className={styles.divbox}>{clickedVideo.snippet.title}</h2>
+      <img
+        src={clickedVideo?.snippet?.thumbnails?.standard?.url}
+        alt={clickedVideo?.snippet?.title}
+      />
+      <h2 className={styles.divbox}>{clickedVideo?.snippet?.title}</h2>
     </div>
   );
 }
