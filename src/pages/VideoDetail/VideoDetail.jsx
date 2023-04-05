@@ -5,6 +5,19 @@ import styles from "./VideoDetail.module.css";
 
 export default function VideoDetail() {
   const { etag } = useParams();
+  const {
+    isLoading,
+    error,
+    data: test,
+  } = useQuery(["test"], async () => {
+    return fetch("../../data/popular.json").then((res) => res.json());
+  });
+  const clickedVideo = test.items.find((item) => item.etag === etag);
 
-  return <div className={styles.divbox}>{etag}</div>;
+  if (isLoading) return <p>Loading...</p>;
+  if (error) return <p>{error.message}</p>;
+
+  return console.log(clickedVideo);
 }
+
+// const 변수 = all
