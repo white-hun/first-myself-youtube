@@ -5,9 +5,6 @@ import styles from "./VideoDetail.module.css";
 import RelatedVideo from "../RelatedVideo/RelatedVideo";
 import DetailCard from "../../components/DetailCard/DetailCard";
 import NotFound from "../NotFound/NotFound";
-// import popular from "../../../public/data/popular.json";
-// import bts from "../../../public/data/bts.json";
-// import aespa from "../../../public/data/aespa.json";
 
 export default function VideoDetail() {
   const { etag } = useParams();
@@ -16,7 +13,7 @@ export default function VideoDetail() {
     error,
     data: test,
   } = useQuery(["test"], async () => {
-    return fetch("../../data/popular.json").then((res) => res.json());
+    return fetch("../../data/popular.json").then((res) => res.json()); // this point
   });
 
   if (isLoading) return <p>Loading...</p>;
