@@ -20,7 +20,7 @@ export default function VideoHome() {
     <div className={styles.video}>
       {popular.items.map((video) => (
         <VideoCard
-          key={video.etag}
+          ukey={video.etag}
           id={video.etag}
           thumbnails={video.snippet.thumbnails.medium.url}
           title={video.snippet.title}

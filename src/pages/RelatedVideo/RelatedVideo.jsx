@@ -1,5 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
+import styles from "./RelatedVideo.module.css";
+import RelatedCard from "../../components/RelatedCard/RelatedCard";
 
 export default function Related() {
   const {
@@ -14,13 +16,14 @@ export default function Related() {
   return (
     <div>
       {related?.items?.map((i) => (
-        <div key={i.etag}>
-          <img src={i?.snippet?.thumbnails?.default?.url} alt={i?.snippet?.title} />
-          <div>
-            <p>{i?.snippet?.title}</p>
-            <p>{i?.snippet?.publishedAt}</p>
-          </div>
-        </div>
+        <RelatedCard
+          ukey={i.etag}
+          id={i.etag}
+          img={i?.snippet?.thumbnails?.default?.url}
+          title={i?.snippet?.title}
+          channel={i?.snippet?.channelTitle}
+          publish={i?.snippet?.publishedAt}
+        />
       ))}
     </div>
   );

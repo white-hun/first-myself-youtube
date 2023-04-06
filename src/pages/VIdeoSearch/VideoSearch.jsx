@@ -23,7 +23,7 @@ export default function VideoSearch() {
     <div className={styles.videosearch}>
       {searchvideo.items?.map((value) => (
         <SearchVideoCard
-          key={value.etag}
+          ukey={value.etag}
           id={value.etag}
           thumbnails={value.snippet.thumbnails.medium.url}
           title={value.snippet.title}
