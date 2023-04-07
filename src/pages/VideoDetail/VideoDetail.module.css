@@ -5,17 +5,18 @@
 }
 .detailpage {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(720px, 1fr));
+  grid-template-columns: repeat(2, 5fr, 1fr);
   grid-gap: inherit;
   padding: 10px;
   padding-top: 70px;
   width: 100%;
 }
+
 .detailcardbox {
-  max-width: 100%;
+  max-width: 90%;
   margin-bottom: 3rem;
 }
 .relatedvideobox {
   display: flex;
-  max-width: 90%;
+  max-width: 50%;
 }

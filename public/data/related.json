@@ -259,6 +259,11 @@
             "url": "https://i.ytimg.com/vi/P_6vDLq64gE/sddefault.jpg",
             "width": 640,
             "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/P_6vDLq64gE/sddefault.jpg",
+            "width": 1280,
+            "height": 720
           }
         },
         "channelTitle": "TED",
@@ -430,6 +435,11 @@
             "url": "https://i.ytimg.com/vi/yWWGRXsKHZc/sddefault.jpg",
             "width": 640,
             "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/yWWGRXsKHZc/sddefault.jpg",
+            "width": 1280,
+            "height": 720
           }
         },
         "channelTitle": "CBS Mornings",
@@ -865,6 +875,11 @@
             "url": "https://i.ytimg.com/vi/phcDQ0H_LnY/sddefault.jpg",
             "width": 640,
             "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/phcDQ0H_LnY/sddefault.jpg",
+            "width": 1280,
+            "height": 720
           }
         },
         "channelTitle": "PopTech",
@@ -992,6 +1007,11 @@
             "url": "https://i.ytimg.com/vi/iG9CE55wbtY/sddefault.jpg",
             "width": 640,
             "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/iG9CE55wbtY/sddefault.jpg",
+            "width": 1280,
+            "height": 720
           }
         },
         "channelTitle": "TED",

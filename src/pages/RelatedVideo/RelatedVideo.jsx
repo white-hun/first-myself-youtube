@@ -19,7 +19,7 @@ export default function Related() {
         <RelatedCard
           ukey={i.etag}
           id={i.etag}
-          img={i?.snippet?.thumbnails?.default?.url}
+          img={i?.snippet?.thumbnails?.maxres?.url}
           title={i?.snippet?.title}
           channel={i?.snippet?.channelTitle}
           publish={i?.snippet?.publishedAt}
