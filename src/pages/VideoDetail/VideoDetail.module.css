@@ -1,6 +1,6 @@
 .detailbox {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 4rem;
 }
 .detailpage {
@@ -12,11 +12,10 @@
   width: 100%;
 }
 .detailcardbox {
-  max-width: 1080px;
+  max-width: 100%;
   margin-bottom: 3rem;
 }
 .relatedvideobox {
   display: flex;
-  justify-content: flex-end;
-  max-width: 400px;
+  max-width: 90%;
 }
