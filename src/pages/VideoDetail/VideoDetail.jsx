@@ -31,7 +31,7 @@ export default function VideoDetail() {
   return (
     <div className={styles.detailbox}>
       <div className={styles.detailpage}>
-        <div>
+        <div className={styles.detailcardbox}>
           <DetailCard
             ukey={clickedVideo?.etag}
             img={clickedVideo?.snippet?.thumbnails?.standard?.url}
@@ -39,7 +39,7 @@ export default function VideoDetail() {
             channel={clickedVideo?.snippet?.channelTitle}
           />
         </div>
-        <div>
+        <div className={styles.relatedvideobox}>
           <RelatedVideo />
         </div>
       </div>
