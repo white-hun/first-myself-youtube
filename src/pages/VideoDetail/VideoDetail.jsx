@@ -6,7 +6,7 @@ import RelatedVideo from "../RelatedVideo/RelatedVideo";
 import DetailCard from "../../components/DetailCard/DetailCard";
 import NotFound from "../NotFound/NotFound";
 
-const jsonfile = ["popular", "related", "bts", "aespa"];
+// const jsonfile = ["popular", "related", "bts", "aespa"];
 
 export default function VideoDetail() {
   const { etag } = useParams();
@@ -15,7 +15,7 @@ export default function VideoDetail() {
     error,
     data: test,
   } = useQuery(["test"], async () => {
-    return fetch(`../../data/${jsonfile.map((j) => JSON.parse(j))}.json`).then((res) => res.json()); // this point
+    return fetch(`../../data/popular.json`).then((res) => res.json()); // this point
   });
 
   if (isLoading) return <p>Loading...</p>;
