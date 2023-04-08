@@ -15,7 +15,7 @@ export default function VideoDetail() {
     error,
     data: test,
   } = useQuery(["test"], async () => {
-    return fetch(`../../data/${jsonfile.map()}.json`).then((res) => res.json()); // this point
+    return fetch(`../../data/${jsonfile.map((j) => JSON.parse(j))}.json`).then((res) => res.json()); // this point
   });
 
   if (isLoading) return <p>Loading...</p>;
