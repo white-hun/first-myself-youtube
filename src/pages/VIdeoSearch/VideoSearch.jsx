@@ -36,4 +36,5 @@ export default function VideoSearch() {
   );
 }
 
+//`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${search}&key=AIzaSyAhoKOR1IrncZNFocBhgkbYVAl06-5ZtxY`
 //console.log(bts.items.map((i) => i.id.videoId));

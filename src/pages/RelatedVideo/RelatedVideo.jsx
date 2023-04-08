@@ -28,3 +28,5 @@ export default function Related() {
     </div>
   );
 }
+
+// "https://youtube.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=Ks-_Mh1QhMc&type=video&maxResults=25&key=AIzaSyAhoKOR1IrncZNFocBhgkbYVAl06-5ZtxY"
