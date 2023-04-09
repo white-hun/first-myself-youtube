@@ -9,7 +9,8 @@ export default function SearchInput() {
   const handleChange = (e) => setSearch(e.target.value);
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate(`/videos/${search}`);
+    navigate(`/search/${search}`);
+    setSearch("");
   };
   return (
     <div>

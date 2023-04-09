@@ -35,7 +35,7 @@ export default function VideoDetail() {
       <div className={styles.detailpage}>
         <div className={styles.detailcardbox}>
           <DetailCard
-            ukey={clickedVideo?.etag}
+            key={clickedVideo?.etag}
             thumbnail={clickedVideo?.snippet?.thumbnails?.maxres?.url}
             title={clickedVideo?.snippet?.title}
             channel={clickedVideo?.snippet?.channelTitle}

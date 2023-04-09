@@ -2,15 +2,7 @@ import React from "react";
 import styles from "./SearchVideoCard.module.css";
 import { Link } from "react-router-dom";
 
-export default function SearchVideoCard({
-  ukey,
-  id,
-  thumbnails,
-  title,
-  publish,
-  channel,
-  description,
-}) {
+export default function SearchVideoCard({ id, thumbnails, title, publish, channel, description }) {
   // const { search } = useParams();
   const decodeHtml = (html) => {
     let txt = document.createElement("textarea");
@@ -19,7 +11,7 @@ export default function SearchVideoCard({
   };
 
   return (
-    <div className={styles.searchvideocard} key={ukey}>
+    <div className={styles.searchvideocard}>
       <Link to={`/watch/${id}`}>
         <div>
           <img src={thumbnails} alt={title} className={styles.thumbnails} />

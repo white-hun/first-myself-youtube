@@ -17,8 +17,8 @@ export default function Related() {
     <div>
       {related?.items?.map((i) => (
         <RelatedCard
-          ukey={i.etag}
-          id={i.etag}
+          key={i?.etag}
+          id={i?.etag}
           img={i?.snippet?.thumbnails?.maxres?.url}
           title={i?.snippet?.title}
           channel={i?.snippet?.channelTitle}
